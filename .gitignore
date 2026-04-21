@@ -1,0 +1,83 @@
+# ==========================================
+# 1. Datasets & Raw Logs (CRITICAL FOR LICENSING)
+# ==========================================
+/data_raw/
+/data_processed/
+*.csv
+*.tsv
+*.json
+*.log
+
+# ==========================================
+# 2. Secret Keys & Environment Variables
+# ==========================================
+.env
+.env.*
+*.key
+/secrets/
+# Ensure JL-projection keys are NEVER tracked
+jl_secret_key.pem 
+projection_matrix.npy
+
+# ==========================================
+# 3. PyTorch & Machine Learning Models
+# ==========================================
+# Do not track heavy model weights or checkpoints
+*.pt
+*.pth
+*.ckpt
+/models/checkpoints/
+/lightning_logs/
+/runs/
+
+# ==========================================
+# 4. Python Core & Virtual Environments
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env_dir/
+
+# ==========================================
+# 5. Jupyter Notebooks & IDEs
+# ==========================================
+.ipynb_checkpoints
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# 6. OS Generated Files
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
