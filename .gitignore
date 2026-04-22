@@ -1,12 +1,8 @@
 # ==========================================
-# 1. Datasets & Raw Logs (CRITICAL FOR LICENSING)
+# 1. Datasets & Raw Logs (IGNORE EVERYTHING IN FOLDERS)
 # ==========================================
-/data_raw/
-/data_processed/
-*.csv
-*.tsv
-*.json
-*.log
+/data_raw/*
+/data_processed/*
 
 # ==========================================
 # 2. Secret Keys & Environment Variables
@@ -15,14 +11,12 @@
 .env.*
 *.key
 /secrets/
-# Ensure JL-projection keys are NEVER tracked
 jl_secret_key.pem 
 projection_matrix.npy
 
 # ==========================================
 # 3. PyTorch & Machine Learning Models
 # ==========================================
-# Do not track heavy model weights or checkpoints
 *.pt
 *.pth
 *.ckpt
@@ -48,11 +42,8 @@ eggs/
 .installed.cfg
 *.egg
 *.egg-info/
-
-# Virtual Environments
 venv/
 .venv/
-env/
 .env_dir/
 
 # ==========================================
@@ -76,11 +67,7 @@ ehthumbs.db
 Thumbs.db
 
 # ==========================================
-# 7. EXCEPTION RULES: Keep README files
+# 7. EXCEPTION: Track ALL Markdown Files
 # ==========================================
-!/data_raw/*.md
-!/data_processed/*.md
-!/evaluation/*.md
-!/models/*.md
-!/notebooks/*.md
-!/src/*.md
+!*.md
+!**/*.md
