@@ -71,3 +71,6 @@ Thumbs.db
 # ==========================================
 !*.md
 !**/*.md
+
+# Exclude GEMINI.md specifically
+GEMINI.md
